@@ -1,0 +1,137 @@
+.contact-main-wrapper {
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #020617;
+}
+
+.contact-container-custom {
+  width: 80%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.contact-flex-layout {
+  display: flex;
+  gap: 40px; /* Jarak antar kolom dirapatkan */
+  margin-top: 30px;
+  flex-direction: row-reverse; 
+}
+
+/* SISI FORM */
+.contact-form-side {
+  flex: 1.2;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Jarak antar input field dirapatkan */
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  background: #0f172a;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 8px;
+  color: #f8fafc;
+  outline: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-group textarea {
+  resize: none; /* MEMATIKAN FITUR ATUR UKURAN */
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  border-color: #38bdf8;
+  background: #1e293b;
+}
+
+.contact-submit-btn {
+  padding: 14px;
+  background: #38bdf8;
+  color: #020617;
+  border: none;
+  border-radius: 8px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.contact-submit-btn:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+}
+
+/* SISI INFO */
+.contact-info-side {
+  flex: 1;
+}
+
+.contact-sub-title {
+  font-size: 1.5rem; /* Ukuran dikecilkan sedikit */
+  color: #38bdf8;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.contact-items-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Jarak antar info teks dirapatkan */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-icon-react {
+  color: #38bdf8;
+  font-size: 1.2rem;
+  min-width: 20px;
+}
+
+.contact-item p {
+  color: #94a3b8;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* RESPONSIVE (HP) */
+@media (max-width: 992px) {
+  .contact-flex-layout {
+    flex-direction: column; /* Info tetap di atas, Form di bawah */
+    gap: 30px;
+  }
+  
+  .contact-container-custom {
+    width: 90%;
+    padding: 40px 0;
+  }
+  
+  .contact-info-side {
+    text-align: left; /* Teks tetap kiri agar rapi dengan icon */
+  }
+
+  .contact-sub-title {
+    text-align: center;
+  }
+
+  .contact-items-stack {
+    align-items: center; /* Info teks ke tengah untuk HP */
+  }
+
+  .contact-item {
+  width: 70%;
+
+  }
+}

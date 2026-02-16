@@ -1,0 +1,96 @@
+.tools-wrapper {
+  padding: 100px 0;
+  background-color: #020617;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+.tools-container {
+  width: 90%;
+  max-width: 1100px;
+}
+
+
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.tool-card {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(56, 189, 248, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+/* HOVER ZOOM EFFECT */
+.tool-card:hover {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: #38bdf8;
+  transform: scale(1.05); /* Zoom ke depan */
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+  z-index: 10;
+}
+
+.tool-icon {
+  font-size: 2.5rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Style khusus untuk gambar (ChatGPT/Gemini) */
+.tool-img-src {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.tool-info h4 {
+  font-size: 1.1rem;
+  color: #f8fafc;
+  margin-bottom: 4px;
+}
+
+.tool-info p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.4;
+}
+
+/* RESPONSIVE HP (2 KOLOM) */
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .tool-card {
+    padding: 15px 10px;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .tool-card:hover {
+    transform: scale(1.03); /* Zoom sedikit saja di HP */
+  }
+
+  .tool-icon {
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+  }
+}

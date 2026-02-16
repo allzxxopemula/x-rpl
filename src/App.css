@@ -1,0 +1,124 @@
+/* --- 1. FONTS & VARIABLES --- */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+
+:root {
+  --bg-dark: #020617;
+  --card-bg: #0f172a;
+  --primary: #38bdf8;
+  --text-main: #f8fafc;
+  --text-dim: #94a3b8;
+  --glow: rgba(56, 189, 248, 0.4);
+}
+
+/* --- 2. GLOBAL RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- 3. LAYOUT SYSTEM --- */
+
+/* 1. Aturan Global (Termasuk Hero & Semua Section Animasi) */
+.pin-wrapper, 
+section {
+  width: 100%;
+  min-height: 100vh; /* Semua section default-nya full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* 2. KUNCI FIX FOOTER: Pengecualian Spesifik agar TIDAK Full Screen */
+section.footer-section {
+  min-height: auto !important; /* Paksa tinggi mengikuti konten */
+  display: block !important;   /* Hapus flex agar tidak melayang di tengah */
+}
+
+/* 3. Aturan Khusus Stacking (Kunci GSAP) */
+.about-section, 
+.structure-section, 
+.project-section,
+.tools-section,
+.gallery-section,
+.schedule-section,
+.contact-section {
+  width: 100%;
+  display: block;   
+  overflow: hidden; 
+  background-color: var(--bg-dark);
+}
+
+/* --- 4. COMPONENTS --- */
+
+.top-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #f8fafc;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+/* --- 5. RESPONSIVE --- */
+@media (max-width: 768px) {
+  .section-container {
+    width: 90%;
+  }
+}
+
+
+
+/* FORCE CENTER UNTUK SEMUA PIN GSAP */
+.pin-spacer {
+  /* Paksa pembungkus GSAP jadi flexbox */
+  display: flex !important;
+  /* Tarik semua isinya ke tengah horizontal */
+  justify-content: center !important;
+  /* Pastikan lebar pembungkus selalu menuhin layar */
+  width: 100vw !important;
+  left: 0 !important;
+}
+
+/* Pastikan konten di dalemnya gak ikutan melar */
+.hero-content, .about-container, .struct-container {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Update di bagian Layout System */
+
+/* 1. Aturan Global tetap 100vh kecuali Contact & Footer */
+.pin-wrapper, 
+section:not(.contact-section):not(.footer-section) {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* 2. Pengecualian Spesifik buat Contact */
+section.contact-section {
+  width: 100%;
+  min-height: auto !important; /* Biar tingginya pas sesuai isi form-nya */
+  display: block !important;
+  padding: 80px 0; /* Kasih jarak atas bawah biar gak nempel banget */
+  background-color: var(--bg-dark);
+}

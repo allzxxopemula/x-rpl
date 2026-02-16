@@ -1,0 +1,131 @@
+.footer-main-wrapper {
+  width: 100%;
+  background-color: #020617;
+  /* Padding dikontrol agar tinggi alami (bukan full screen) */
+  padding: 50px 0 20px 0;
+  border-top: 1px solid rgba(56, 189, 248, 0.1);
+  position: relative;
+}
+
+.footer-container-custom {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-brand {
+  flex: 1.2;
+  min-width: 200px;
+}
+
+.footer-logo-text {
+  color: #38bdf8;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.footer-tagline {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 250px;
+}
+
+.footer-heading {
+  color: #f8fafc;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Medsos Style */
+.social-links-grid {
+  display: flex;
+  gap: 15px;
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  background: #0f172a;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #38bdf8;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #38bdf8;
+  color: #020617;
+  transform: translateY(-5px);
+}
+
+.footer-dev {
+  min-width: 150px;
+}
+
+.dev-name {
+  color: #f8fafc;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.dev-role {
+  color: #475569;
+  font-size: 0.8rem;
+}
+
+/* Bottom Area */
+.footer-line {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 20px;
+}
+
+.footer-copyright-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #475569;
+  font-size: 0.8rem;
+}
+
+/* RESPONSIVE (HP) */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .social-links-grid {
+    justify-content: center;
+  }
+
+  .footer-copyright-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-tagline {
+    margin: 0 auto;
+  }
+}

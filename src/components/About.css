@@ -1,0 +1,139 @@
+/* --- About Section Styling --- */
+.about-container {
+  padding: 80px 0;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card-container {
+  width: 90%;           /* Biar gak nempel banget ke pinggir layar HP */   /* Kunci lebar maksimal biar gak melar pas zoom out */
+  margin: 0 auto;       /* Pastiin dia tetep di tengah */
+  position: relative;
+  z-index: 2;
+}
+
+
+
+/* 1. Grid Keahlian (Atas) */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%; /* Melebar penuh sesuai container */
+  margin-bottom: 20px; /* Jarak rapat ke grid bawah */
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 40px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.1);
+  text-align: center;
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  border-color: var(--primary);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+  display: block;
+}
+
+.card-desc {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* 2. Grid Statistik (Bawah) - SEKARANG SEJAJAR DENGAN ATAS */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom agar tetap proporsional */
+  gap: 20px; /* Gap disamakan dengan grid atas agar lurus */
+  width: 100%; /* Melebar penuh sejajar dengan grid keahlian */
+  margin-top: 0px; 
+}
+
+.stat-card {
+  background: rgba(15, 23, 42, 0.4);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  justify-content: center; 
+  text-align: center;      
+  transition: 0.3s ease;
+}
+
+.stat-card:hover {
+  background: var(--card-bg);
+  border-style: solid;
+  border-color: var(--primary);
+  transform: scale(1.02); /* Scale lebih kecil agar tidak tabrakan */
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.stat-count {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1;
+  margin: 5px 0;
+}
+
+.stat-label {
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+}
+
+/* --- Responsive Breakpoints --- */
+
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-title { font-size: 2rem; }
+
+  .about-grid, .stats-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .stat-card {
+    padding: 20px;
+    flex-direction: row; 
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .stat-info { align-items: flex-start; }
+  .stat-count { font-size: 2rem; }
+}

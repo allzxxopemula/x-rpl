@@ -1,0 +1,120 @@
+.struct-wrapper {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #020617; 
+  color: #ffffff;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.struct-container {
+  width: 90%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+
+
+/* Fallback jika var(--text-main) tidak terbaca */
+@supports not (color: var(--text-main)) {
+  .struct-title { color: #38bdf8; }
+}
+
+.margin-top {
+  margin-top: 80px;
+}
+
+/* --- Layout Grid --- */
+.center-flex {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+/* --- Card Styling --- */
+.card-item {
+  background: #0f172a;
+  border-radius: 15px;
+  border: 1px solid rgba(56, 189, 248, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-item:hover {
+  transform: translateY(-8px);
+  border-color: #38bdf8;
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+  background: #1e293b;
+}
+
+.card-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card-item:hover .card-img img {
+  transform: scale(1.1);
+}
+
+.card-txt {
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.card-txt.only-name {
+  padding: 25px 10px;
+}
+
+.card-txt h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* --- Badge Role --- */
+.badge-role {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .grid-layout { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .struct-title {
+    font-size: 2rem; /* Sedikit lebih kecil di HP agar tidak overflow */
+  }
+}
