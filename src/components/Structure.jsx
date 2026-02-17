@@ -2,12 +2,12 @@ import React from 'react';
 import './Structure.css';
 
 const Structure = () => {
-  const teacher = { name: "Meia Ferydha S.Pd", role: "Wali Kelas", img: "anggota.jpg" };
+  const teacher = { name: "Meia Ferydha", role: "Wali Kelas", img: "anggota.jpg" };
 
   const coreMembers = [
-    { name: "Galang Wahyu", role: "Ketua Kelas", img: "anggota.jpg" },
-    { name: "Gaung Sabilillah", role: "Wakil Ketua", img: "anggota.jpg" },
-    { name: "Ayyub Rasyif", role: "Sekretaris", img: "anggota.jpg" },
+    { name: "Galang", role: "Ketua Kelas", img: "anggota.jpg" },
+    { name: "Gaung", role: "Wakil Ketua", img: "anggota.jpg" },
+    { name: "Ayyub", role: "Sekretaris", img: "anggota.jpg" },
     { name: "Novisha", role: "Bendahara", img: "anggota.jpg" },
   ];
 
