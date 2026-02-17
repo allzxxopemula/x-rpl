@@ -15,7 +15,7 @@ const Hero = () => {
           />
         </div>
         <p className="hero-desc">
-          Kelas X-RPL SMK adalah tempat berkumpulnya para inovator masa depan dalam dunia teknologi perangkat lunak. 
+          Kelas X-RPL SMK MUSA adalah tempat berkumpulnya para inovator masa depan dalam dunia teknologi perangkat lunak. 
           Kami belajar, berkembang, dan berkreasi bersama.
         </p>
         <div className="hero-btns">
