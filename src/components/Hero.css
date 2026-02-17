@@ -13,7 +13,6 @@
 .hero-bg {
   position: absolute;
   inset: 0;
-  /* Ganti URL lama dengan path folder public kamu */
   background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.8)), 
               url('/gallery/fotbarbareng.jpeg') center/cover;
   filter: blur(2px);
@@ -48,7 +47,6 @@
   margin-top: 30px;
 }
 
-/* Update pada class .btn */
 .btn {
   padding: 12px 28px;
   border-radius: 8px;
@@ -56,8 +54,6 @@
   font-weight: 700;
   border: none;
   transition: 0.3s;
-  
-  /* Tambahan agar tag <a> sama dengan button */
   display: inline-block; 
   text-decoration: none;
   text-align: center;
@@ -78,46 +74,37 @@
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 20px var(--glow);
-  /* Memastikan warna teks tidak berubah saat dihover (khusus tag a) */
   color: inherit; 
 }
 
-/* Khusus btn-outline agar tetap biru saat hover */
 .btn-outline:hover {
   color: var(--primary);
 }
 
-
-/* --- RESPONSIVE UNTUK HP (VERSI MANTAP & PAS) --- */
 @media (max-width: 768px) {
   .hero-wrapper {
-    /* Tambah padding atas agar tidak terlalu mepet navbar */
     padding-top: 100px;
     padding-bottom: 40px;
-    height: auto; /* Biar konten panjang di HP tidak terpotong */
+    height: auto;
     min-height: 100vh;
   }
 
   .hero-content h1 {
-    /* Ukuran dinaikkan supaya tegas */
     font-size: 2rem; 
     line-height: 1.1;
     margin-bottom: 15px;
-    /* Lebar ini pas untuk membuat "Lunak" turun tapi tetap lebar */
     max-width: 320px; 
     margin-left: auto;
     margin-right: auto;
   }
 
   .typewriter-box {
-    /* Ukuran typewriter dibuat lebih terbaca */
     font-size: 1.25rem;
     height: 35px;
     margin-bottom: 10px;
   }
 
   .hero-desc {
-    /* Ukuran teks deskripsi dibuat normal, tidak kecil */
     font-size: 1rem;
     line-height: 1.5;
     padding: 0 10px;
@@ -126,7 +113,6 @@
   }
 
   .hero-btns {
-    /* Tombol tetap sejajar tapi lebih lebar */
     display: flex;
     flex-direction: row;
     gap: 12px;
@@ -135,7 +121,6 @@
   }
 
   .btn {
-    /* Tombol lebih gemuk sedikit agar enak dipencet (Thumb Friendly) */
     padding: 14px 20px;
     font-size: 0.95rem;
     flex: 1;
@@ -145,7 +130,6 @@
   }
 }
 
-/* Khusus layar sangat kecil (iPhone SE, dll) */
 @media (max-width: 400px) {
   .hero-content h1 {
     font-size: 2.1rem;

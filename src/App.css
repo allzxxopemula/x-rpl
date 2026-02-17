@@ -30,79 +30,44 @@ html {
   scroll-behavior: smooth;
 }
 
-/* --- 3. LAYOUT SYSTEM --- */
+/* --- 3. GALAXY ANIMATION (SOLID BACKGROUND + STARS) --- */
+@keyframes galaxyMove {
+  from { background-position: 0% 0%; }
+  to { background-position: 100% 100%; }
+}
 
-/* 1. Aturan Global (Termasuk Hero & Semua Section Animasi) */
-.pin-wrapper, 
-section {
-  width: 100%;
-  min-height: 100vh; /* Semua section default-nya full screen */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.galaxy-stars {
   position: relative;
+  /* KUNCINYA DI SINI: Kasih warna solid supaya nutupin section sebelumnya */
+  background-color: #020617; 
+  background-image: 
+    radial-gradient(2px 2px at 20% 30%, #ffffff 100%, transparent 0),
+    radial-gradient(2.5px 2.5px at 50% 70%, #ffffff 100%, transparent 0),
+    radial-gradient(2px 2px at 80% 40%, #ffffff 100%, transparent 0),
+    radial-gradient(3px 3px at 15% 85%, #ffffff 100%, transparent 0),
+    radial-gradient(2px 2px at 90% 15%, #ffffff 100%, transparent 0);
+  background-size: 500px 500px;
+  animation: galaxyMove 60s linear infinite;
 }
 
-/* 2. KUNCI FIX FOOTER: Pengecualian Spesifik agar TIDAK Full Screen */
-section.footer-section {
-  min-height: auto !important; /* Paksa tinggi mengikuti konten */
-  display: block !important;   /* Hapus flex agar tidak melayang di tengah */
+/* Efek Bintang Lapis Kedua */
+.galaxy-stars::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: 
+    radial-gradient(1.5px 1.5px at 10% 10%, rgba(255,255,255,0.8) 100%, transparent 0),
+    radial-gradient(1.5px 1.5px at 90% 90%, rgba(255,255,255,0.8) 100%, transparent 0);
+  background-size: 300px 300px;
+  animation: galaxyMove 35s linear infinite reverse;
+  opacity: 0.7;
+  z-index: 0;
+  pointer-events: none;
 }
 
-/* 3. Aturan Khusus Stacking (Kunci GSAP) */
-.about-section, 
-.structure-section, 
-.project-section,
-.tools-section,
-.gallery-section,
-.schedule-section,
-.contact-section {
-  width: 100%;
-  display: block;   
-  overflow: hidden; 
-  background-color: var(--bg-dark);
-}
+/* --- 4. LAYOUT SYSTEM --- */
 
-/* --- 4. COMPONENTS --- */
-
-.top-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #f8fafc;
-  font-weight: 800;
-  margin-bottom: 40px;
-}
-
-/* --- 5. RESPONSIVE --- */
-@media (max-width: 768px) {
-  .section-container {
-    width: 90%;
-  }
-}
-
-
-
-/* FORCE CENTER UNTUK SEMUA PIN GSAP */
-.pin-spacer {
-  /* Paksa pembungkus GSAP jadi flexbox */
-  display: flex !important;
-  /* Tarik semua isinya ke tengah horizontal */
-  justify-content: center !important;
-  /* Pastikan lebar pembungkus selalu menuhin layar */
-  width: 100vw !important;
-  left: 0 !important;
-}
-
-/* Pastikan konten di dalemnya gak ikutan melar */
-.hero-content, .about-container, .struct-container {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Update di bagian Layout System */
-
-/* 1. Aturan Global tetap 100vh kecuali Contact & Footer */
+/* Section 100vh untuk Pinning */
 .pin-wrapper, 
 section:not(.contact-section):not(.footer-section) {
   width: 100%;
@@ -112,13 +77,202 @@ section:not(.contact-section):not(.footer-section) {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
-/* 2. Pengecualian Spesifik buat Contact */
+/* Section Stacking GSAP - Harus Solid Background */
+.about-section, 
+.structure-section, 
+.project-section,
+.tools-section,
+.gallery-section,
+.schedule-section {
+  width: 100%;
+  display: block;   
+  /* Pastikan warna solid untuk menutupi layer di bawahnya saat di-pin */
+  background-color: #020617; 
+}
+
+/* Pengecualian spesifik Contact */
 section.contact-section {
   width: 100%;
-  min-height: auto !important; /* Biar tingginya pas sesuai isi form-nya */
+  min-height: auto !important;
   display: block !important;
-  padding: 80px 0; /* Kasih jarak atas bawah biar gak nempel banget */
-  background-color: var(--bg-dark);
+  padding: 80px 0;
+  background-color: #020617;
+}
+
+/* Pengecualian spesifik Footer */
+section.footer-section {
+  min-height: auto !important;
+  display: block !important;
+  background-color: #020617;
+}
+
+/* --- 5. GSAP FIXES --- */
+.pin-spacer {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100vw !important;
+  left: 0 !important;
+}
+
+.hero-content, .about-container, .struct-container {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  z-index: 2; /* Naikkan z-index konten agar di atas ::before bintang */
+}
+
+/* --- 6. INTRO & COMPONENTS --- */
+.intro-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100vh;
+  background: #020617;
+  display: flex; justify-content: center; align-items: center;
+  z-index: 9999;
+  animation: slideUp 0.8s ease-in-out 2.5s forwards;
+}
+
+.intro-logo {
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 800;
+  color: #38bdf8;
+  letter-spacing: 0.5rem;
+  animation: fadeScale 1.5s ease-in-out infinite alternate;
+}
+
+.top-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #f8fafc;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+@keyframes fadeScale {
+  0% { opacity: 0.5; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); visibility: hidden; }
+}
+
+/* --- 7. RESPONSIVE --- */
+@media (max-width: 768px) {
+  .section-container { width: 90%; }
+}
+
+
+/* --- MINI MUSIC BUTTON JEDAG JEDUG (CENTERED FIX) --- */
+/* --- MINI MUSIC BUTTON ULTIMATE (XRPL EDITION) --- */
+.mini-music-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 48px;
+  height: 48px;
+  background-color: #0f172a; /* Biru Gelap Navy */
+  color: #38bdf8;
+  border-radius: 50%;
+  
+  /* Flexbox Centering - Biar Icon Pas di Tengah */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  z-index: 99999; /* Paling atas biar gak ketutup section lain */
+  border: 2px solid rgba(56, 189, 248, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  
+  /* Animasi Muncul Halus (Fade In) */
+  animation: fadeInMusicBtn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 0;
+  margin: 0;
+  overflow: visible; 
+}
+
+/* Wrapper Icon Utama */
+.icon-main-music {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  /* Koreksi visual 1px kebawah biar bener-bener simetris */
+  transform: translateY(1px); 
+}
+
+.icon-main-music svg {
+  display: block;
+}
+
+/* --- ANIMASI JEDAG JEDUG (AKTIF SAAT PLAY) --- */
+.jj-active {
+  animation: jedagJedug 0.8s infinite alternate !important;
+  border-color: #38bdf8;
+}
+
+@keyframes jedagJedug {
+  0% {
+    transform: scale(1) translateY(0);
+    box-shadow: 0 0 5px #38bdf8, 0 0 10px #38bdf8;
+  }
+  100% {
+    transform: scale(1.18) translateY(0); /* Efek membesar sesuai beat */
+    box-shadow: 0 0 15px #38bdf8, 0 0 30px rgba(56, 189, 248, 0.6);
+  }
+}
+
+/* --- ANIMASI FADE IN (MUNCUL SETELAH INTRO) --- */
+@keyframes fadeInMusicBtn {
+  from {
+    opacity: 0;
+    transform: scale(0.3) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* --- NOTE MUSIK MELAYANG --- */
+.note-anim {
+  position: absolute;
+  font-size: 0.8rem;
+  color: #38bdf8;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1; 
+}
+
+.note-1 { animation: flyNote 2s infinite linear; }
+.note-2 { animation: flyNote 2s infinite linear 1s; }
+
+@keyframes flyNote {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translate(-35px, -55px) rotate(45deg); opacity: 0; }
+}
+
+/* Hover Effect */
+.mini-music-btn:hover {
+  background-color: #1e293b;
+  border-color: #38bdf8;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  .mini-music-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
 }

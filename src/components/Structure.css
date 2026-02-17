@@ -1,7 +1,7 @@
 .struct-wrapper {
   width: 100%;
   padding: 100px 0;
-  background-color: #020617; 
+  background-color: transparent !important; 
   color: #ffffff;
   display: flex;
   overflow-x: hidden;
@@ -17,7 +17,7 @@
 
 
 
-/* Fallback jika var(--text-main) tidak terbaca */
+
 @supports not (color: var(--text-main)) {
   .struct-title { color: #38bdf8; }
 }

@@ -7,13 +7,13 @@ const Project = () => {
     title: "Web Login System",
     tech: ["PHP", "CSS", "HTML"],
     desc: "Sistem autentikasi user yang aman menggunakan PHP native, mengelola sesi login dan enkripsi data untuk perlindungan akun.",
-    img: "https://www.malasngoding.com/wp-content/uploads/2018/03/membuat-login-dengan-php-dan-mysqli-menggunakan-md5-1.png"
+    img: "sabar.jpg"
   },
   {
     title: "Database MYSQLI Management",
     tech: ["PHP", "MySQL", "HTML"],
     desc: "Implementasi CRUD (Create, Read, Update, Delete) yang terhubung dengan database MySQLi untuk manajemen data dinamis yang efisien.",
-    img: "https://www.malasngoding.com/wp-content/uploads/2018/03/login-enkripsi-password-md5-php.png"
+    img: "sabar.jpg"
   },
   {
     title: "Modern Form Login UI",

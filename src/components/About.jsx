@@ -42,7 +42,7 @@ const About = () => {
             const suffix = stat.count.includes('+') ? '+' : '';
 
             return (
-              <div className="stat-card" key={i} data-aos="fade-up" data-aos-delay={i * 200}>
+              <div className="stat-card" key={i} data-aos="fade-right" data-aos-delay={i * 200}>
                 <div className="stat-icon">{stat.icon}</div>
                 <div className="stat-info">
                   <h2 className="stat-count">

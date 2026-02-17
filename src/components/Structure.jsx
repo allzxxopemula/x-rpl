@@ -14,7 +14,7 @@ const Structure = () => {
   const students = [
     { name: "Abif", img: "anggota.jpg" },
     { name: "Adam", img: "anggota.jpg" },
-    { name: "Aldo", img: "anggota.jpg" },
+    { name: "Rendy", img: "anggota.jpg" },
     { name: "Ayyub", img: "anggota.jpg" },
     { name: "Brian", img: "anggota.jpg" },
     { name: "Fernando", img: "anggota.jpg" },

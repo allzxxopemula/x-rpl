@@ -1,8 +1,15 @@
 import React from 'react';
-import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa'; // Import icon
+import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa'; 
 import './Contact.css';
 
 const Contact = () => {
+
+  // Fungsi untuk handle klik tombol kirim
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Mencegah form reload halaman
+    alert("web masih dalam pengembangan yaa..");
+  };
+
   return (
     <div className="contact-main-wrapper" id="contact">
       <div className="contact-container-custom" data-aos="fade">
@@ -33,7 +40,8 @@ const Contact = () => {
 
           {/* SISI FORM */}
           <div className="contact-form-side">
-            <form className="contact-form">
+            {/* Tambahkan onSubmit di sini */}
+            <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
                 <input type="text" placeholder="Nama Lengkap" required />
               </div>
@@ -41,7 +49,6 @@ const Contact = () => {
                 <input type="email" placeholder="Email Anda" required />
               </div>
               <div className="form-group">
-                {/* Rows dikurangi supaya tidak terlalu tinggi */}
                 <textarea placeholder="Pesan untuk kelas kami..." rows="4" required></textarea>
               </div>
               <button type="submit" className="contact-submit-btn">Kirim Pesan</button>

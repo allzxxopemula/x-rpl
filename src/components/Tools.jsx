@@ -1,6 +1,5 @@
 import React from 'react';
 import './Tools.css';
-// Menggunakan import yang lebih aman dan umum
 import { 
   FaHtml5, 
   FaCss3Alt, 
@@ -8,10 +7,12 @@ import {
   FaPhp, 
   FaReact, 
   FaDatabase, 
-  FaRobot, // Gunakan Robot untuk AI agar aman
-  FaCode // Gunakan Code untuk VS Code agar aman
+  FaRobot, 
+  FaCode,
+  FaPython, // Icon Python
+  FaNodeJs  // Tambahan Node.js agar makin lengkap
 } from 'react-icons/fa'; 
-import { SiTailwindcss, SiBootstrap } from 'react-icons/si';
+import { SiTailwindcss, SiBootstrap, SiCplusplus } from 'react-icons/si'; // Icon Bootstrap & C++
 
 const Tools = () => {
   const toolList = [
@@ -19,9 +20,13 @@ const Tools = () => {
     { name: "CSS3", desc: "Desain layout dan styling modern.", icon: <FaCss3Alt />, color: "#1572B6" },
     { name: "JavaScript", desc: "Logika dan interaktivitas website.", icon: <FaJs />, color: "#F7DF1E" },
     { name: "React JS", desc: "Library untuk antarmuka UI dinamis.", icon: <FaReact />, color: "#61DAFB" },
+    { name: "Python", desc: "Bahasa pemrograman serbaguna dan AI.", icon: <FaPython />, color: "#3776AB" }, // New
+    { name: "C++", desc: "Pemrograman sistem performa tinggi.", icon: <SiCplusplus />, color: "#00599C" }, // New
     { name: "PHP", desc: "Pemrosesan server-side dan database.", icon: <FaPhp />, color: "#777BB4" },
     { name: "MySQL", desc: "Sistem manajemen database relasional.", icon: <FaDatabase />, color: "#4479A1" },
+    { name: "Node.js", desc: "Runtime JavaScript di sisi server.", icon: <FaNodeJs />, color: "#339933" }, // Bonus (Cocok buat partner React)
     { name: "Tailwind", desc: "Framework CSS utility-first.", icon: <SiTailwindcss />, color: "#06B6D4" },
+    { name: "Bootstrap", desc: "Framework CSS responsif populer.", icon: <SiBootstrap />, color: "#7952B3" }, // New
     { name: "VS Code", desc: "Editor kode andalan produktivitas.", icon: <FaCode />, color: "#007ACC" },
     { name: "ChatGPT", desc: "AI pendukung debugging dan ide.", icon: <FaRobot />, color: "#10A37F" },
     { name: "Gemini", desc: "Asisten cerdas optimasi kode.", icon: <FaRobot />, color: "#8E75FF" },
@@ -30,7 +35,6 @@ const Tools = () => {
   return (
     <section className="tools-wrapper" id="tools">
       <div className="tools-container">
-        {/* Menggunakan class yang sama dengan Structure agar identik */}
         <h2 className="top-title" data-aos="fade-down">Tools/Tech</h2>
         <div className="tools-grid">
           {toolList.map((tool, index) => (

@@ -1,6 +1,6 @@
 .tools-wrapper {
   padding: 100px 0;
-  background-color: #020617;
+  background-color: transparent !important;
   display: flex;
   justify-content: center;
   position: relative;
@@ -51,12 +51,6 @@
   flex-shrink: 0;
 }
 
-/* Style khusus untuk gambar (ChatGPT/Gemini) */
-.tool-img-src {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 
 .tool-info h4 {
   font-size: 1.1rem;
