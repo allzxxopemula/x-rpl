@@ -6,17 +6,17 @@ const Schedule = () => {
     {
       id: 1,
       title: "Jadwal Matpel Umum",
-      image: "/jadwal/umum.png", 
+      image: "jadwal/umum.png", 
       // Mengarah ke public/files/JADWL.KELAS MATPEL UMUM.pdf
-      fileUrl: "/files/JADWL.KELAS MATPEL UMUM.pdf",
+      fileUrl: "files/JADWL.KELAS MATPEL UMUM.pdf",
       fileName: "JADWL.KELAS MATPEL UMUM.pdf"
     },
     {
       id: 2,
       title: "Jadwal Matpel Kejuruan",
-      image: "/jadwal/jurusan.png", 
+      image: "jadwal/jurusan.png", 
       // Mengarah ke public/files/JADWAL KELAS MATPEL KEJURUAN.pdf
-      fileUrl: "/files/JADWAL KELAS MATPEL KEJURUAN.pdf",
+      fileUrl: "files/JADWAL KELAS MATPEL KEJURUAN.pdf",
       fileName: "JADWAL KELAS MATPEL KEJURUAN.pdf"
     }
   ];

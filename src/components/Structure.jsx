@@ -2,32 +2,32 @@ import React from 'react';
 import './Structure.css';
 
 const Structure = () => {
-  const teacher = { name: "Meia Ferydha S.Pd", role: "Wali Kelas", img: "/anggota.jpg" };
+  const teacher = { name: "Meia Ferydha S.Pd", role: "Wali Kelas", img: "anggota.jpg" };
 
   const coreMembers = [
-    { name: "Galang Wahyu", role: "Ketua Kelas", img: "/anggota.jpg" },
-    { name: "Gaung Sabilillah", role: "Wakil Ketua", img: "/anggota.jpg" },
-    { name: "Ayyub Rasyif", role: "Sekretaris", img: "/anggota.jpg" },
-    { name: "Novisha", role: "Bendahara", img: "/anggota.jpg" },
+    { name: "Galang Wahyu", role: "Ketua Kelas", img: "anggota.jpg" },
+    { name: "Gaung Sabilillah", role: "Wakil Ketua", img: "anggota.jpg" },
+    { name: "Ayyub Rasyif", role: "Sekretaris", img: "anggota.jpg" },
+    { name: "Novisha", role: "Bendahara", img: "anggota.jpg" },
   ];
 
   const students = [
-    { name: "Abif", img: "/anggota.jpg" },
-    { name: "Adam", img: "/anggota.jpg" },
-    { name: "Aldo", img: "/anggota.jpg" },
-    { name: "Ayyub", img: "/anggota.jpg" },
-    { name: "Brian", img: "/anggota.jpg" },
-    { name: "Fernando", img: "/anggota.jpg" },
-    { name: "Ghanim", img: "/anggota.jpg" },
-    { name: "Rakha", img: "/anggota.jpg" },
-    { name: "Galang", img: "/anggota.jpg" },
-    { name: "Geral", img: "/anggota.jpg" },
-    { name: "Novisha", img: "/anggota.jpg" },
-    { name: "Santi", img: "/anggota.jpg" },
-    { name: "Wahyu", img: "/anggota.jpg" },
-    { name: "Dhihya", img: "/anggota.jpg" },
-    { name: "Gaung", img: "/anggota.jpg" },
-    { name: "Widodo", img: "/anggota.jpg" },
+    { name: "Abif", img: "anggota.jpg" },
+    { name: "Adam", img: "anggota.jpg" },
+    { name: "Aldo", img: "anggota.jpg" },
+    { name: "Ayyub", img: "anggota.jpg" },
+    { name: "Brian", img: "anggota.jpg" },
+    { name: "Fernando", img: "anggota.jpg" },
+    { name: "Ghanim", img: "anggota.jpg" },
+    { name: "Rakha", img: "anggota.jpg" },
+    { name: "Galang", img: "anggota.jpg" },
+    { name: "Geral", img: "anggota.jpg" },
+    { name: "Novisha", img: "anggota.jpg" },
+    { name: "Santi", img: "anggota.jpg" },
+    { name: "Wahyu", img: "anggota.jpg" },
+    { name: "Dhihya", img: "anggota.jpg" },
+    { name: "Gaung", img: "anggota.jpg" },
+    { name: "Widodo", img: "anggota.jpg" },
   ];
 
   return (

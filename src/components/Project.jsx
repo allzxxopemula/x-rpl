@@ -19,13 +19,13 @@ const Project = () => {
     title: "Modern Form Login UI",
     tech: ["HTML", "CSS"],
     desc: "Antarmuka formulir login dengan desain clean dan modern, mengandalkan CSS Flexbox/Grid untuk responsivitas maksimal di berbagai perangkat.",
-    img: "/sabar.jpg"
+    img: "sabar.jpg"
   },
   {
     title: "Landing Page Clone",
     tech: ["HTML", "CSS"],
     desc: "Replikasi desain website sekolah untuk melatih akurasi layouting, tipografi, dan komposisi warna agar menyerupai situs profesional.",
-    img: "/sabar.jpg"
+    img: "sabar.jpg"
   }
 ];
 
