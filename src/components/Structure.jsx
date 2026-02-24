@@ -5,29 +5,29 @@ const Structure = () => {
   const teacher = { name: "Meia Ferydha", role: "Wali Kelas", img: "anggota.jpg" };
 
   const coreMembers = [
-    { name: "Galang", role: "Ketua Kelas", img: "anggota.jpg" },
-    { name: "Gaung", role: "Wakil Ketua", img: "anggota.jpg" },
-    { name: "Ayyub", role: "Sekretaris", img: "anggota.jpg" },
-    { name: "Novisha", role: "Bendahara", img: "anggota.jpg" },
+    { name: "Galang Wahyu", role: "Ketua Kelas", img: "anggota.jpg" },
+    { name: "Gaung Sabilillah", role: "Wakil Ketua", img: "anggota.jpg" },
+    { name: "Ayyub Rashif", role: "Sekretaris", img: "anggota.jpg" },
+    { name: "Nofisha Viammira", role: "Bendahara", img: "anggota.jpg" },
   ];
 
   const students = [
-    { name: "Abif", img: "anggota.jpg" },
-    { name: "Adam", img: "anggota.jpg" },
-    { name: "Rendy", img: "anggota.jpg" },
-    { name: "Ayyub", img: "anggota.jpg" },
-    { name: "Brian", img: "anggota.jpg" },
-    { name: "Fernando", img: "anggota.jpg" },
-    { name: "Ghanim", img: "anggota.jpg" },
-    { name: "Rakha", img: "anggota.jpg" },
-    { name: "Galang", img: "anggota.jpg" },
-    { name: "Geral", img: "anggota.jpg" },
-    { name: "Novisha", img: "anggota.jpg" },
-    { name: "Santi", img: "anggota.jpg" },
-    { name: "Wahyu", img: "anggota.jpg" },
-    { name: "Dhihya", img: "anggota.jpg" },
-    { name: "Gaung", img: "anggota.jpg" },
-    { name: "Widodo", img: "anggota.jpg" },
+    { name: "Abiftian Mareza", img: "anggota.jpg" },
+    { name: "Adam Hibaturrahman", img: "anggota.jpg" },
+    { name: "Aldo Rendy", img: "anggota.jpg" },
+    { name: "Ayyub Rashif", img: "anggota.jpg" },
+    { name: "Brian Adira", img: "anggota.jpg" },
+    { name: "Fernando Gandhi", img: "anggota.jpg" },
+    { name: "Galang Wahyu", img: "anggota.jpg" },
+    { name: "Galih Ghanim", img: "anggota.jpg" },
+    { name: "Gaung Sabilillah", img: "anggota.jpg" },
+    { name: "Geral Dayaka", img: "anggota.jpg" },
+    { name: "Muhammad Dhihya'", img: "anggota.jpg" },
+    { name: "Nofisha Vianmira", img: "anggota.jpg" },
+    { name: "Rakha Widyadhana", img: "anggota.jpg" },
+    { name: "Santi Wulan", img: "anggota.jpg" },
+    { name: "Wahyu Hanindio", img: "anggota.jpg" },
+    { name: "Widodo Santoso", img: "anggota.jpg" },
   ];
 
   return (
