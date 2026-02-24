@@ -38,7 +38,6 @@ html {
 
 .galaxy-stars {
   position: relative;
-  /* KUNCINYA DI SINI: Kasih warna solid supaya nutupin section sebelumnya */
   background-color: #020617; 
   background-image: 
     radial-gradient(2px 2px at 20% 30%, #ffffff 100%, transparent 0),
@@ -80,7 +79,6 @@ section:not(.contact-section):not(.footer-section) {
   overflow: hidden;
 }
 
-/* Section Stacking GSAP - Harus Solid Background */
 .about-section, 
 .structure-section, 
 .project-section,
@@ -89,7 +87,6 @@ section:not(.contact-section):not(.footer-section) {
 .schedule-section {
   width: 100%;
   display: block;   
-  /* Pastikan warna solid untuk menutupi layer di bawahnya saat di-pin */
   background-color: #020617; 
 }
 
@@ -212,7 +209,6 @@ section.footer-section {
   display: block;
 }
 
-/* --- ANIMASI JEDAG JEDUG (AKTIF SAAT PLAY) --- */
 .jj-active {
   animation: jedagJedug 0.8s infinite alternate !important;
   border-color: #38bdf8;
