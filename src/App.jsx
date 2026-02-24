@@ -45,7 +45,8 @@ function App() {
     // Inisialisasi library AOS (Animate On Scroll) untuk komponen statis
     AOS.init({
       duration: 1000,
-      once: true,
+      once: false,
+      mirror: true,
       offset: 100,
       easing: 'ease-in-out',
     });
