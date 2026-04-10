@@ -8,7 +8,8 @@
 }
 
 .card-container {
-  width: 90%;           /* Biar gak nempel banget ke pinggir layar HP */   /* Kunci lebar maksimal biar gak melar pas zoom out */
+  width: 90%;  
+  max-width: 1440px;         /* Biar gak nempel banget ke pinggir layar HP */   /* Kunci lebar maksimal biar gak melar pas zoom out */
   margin: 0 auto;       /* Pastiin dia tetep di tengah */
   position: relative;
   z-index: 2;
