@@ -27,7 +27,7 @@ const Structure = () => {
     { name: "Rakha Widyadhana", img: "anggota.jpg" },
     { name: "Santi Wulan", img: "anggota.jpg" },
     { name: "Wahyu Hanindio", img: "anggota.jpg" },
-    { name: "Widodo Santoso", img: "anggota.jpg" }
+    { name: "Widodo Santoso", img: "anggota.jpg" },
     { name: "Enrico Giri", img: "anggota.jpg" },
   ];
 
