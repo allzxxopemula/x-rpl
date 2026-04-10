@@ -1,7 +1,7 @@
 .struct-wrapper {
   width: 100%;
   padding: 100px 0;
-  background-color: transparent !important; 
+  background-color: transparent !important;
   color: #ffffff;
   display: flex;
   overflow-x: hidden;
@@ -15,8 +15,18 @@
   margin: 0 auto;
 }
 
+/* --- Teacher Section Fix --- */
+.teacher-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
-
+/* Memaksa card wali kelas punya lebar yang sama dengan 1 kolom grid */
+.teacher-section .card-item {
+  width: 100%;
+  max-width: calc((100% - (3 * 15px)) / 4); /* Rumus: (Total lebar - gap) / jumlah kolom */
+}
 
 @supports not (color: var(--text-main)) {
   .struct-title { color: #38bdf8; }
@@ -27,12 +37,6 @@
 }
 
 /* --- Layout Grid --- */
-.center-flex {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
 .grid-layout {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -46,6 +50,7 @@
   border: 1px solid rgba(56, 189, 248, 0.1);
   overflow: hidden;
   transition: all 0.3s ease;
+  height: fit-content; /* Memastikan tinggi mengikuti konten */
 }
 
 .card-item:hover {
@@ -103,9 +108,12 @@
   letter-spacing: 1px;
 }
 
-/* --- Responsive --- */
+/* --- Responsive & Zoom Fix --- */
 @media (max-width: 1024px) {
   .grid-layout { grid-template-columns: repeat(3, 1fr); }
+  .teacher-section .card-item {
+    max-width: calc((100% - (2 * 15px)) / 3);
+  }
 }
 
 @media (max-width: 768px) {
@@ -113,8 +121,11 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
+  .teacher-section .card-item {
+    max-width: calc((100% - (1 * 10px)) / 2);
+  }
   
   .struct-title {
-    font-size: 2rem; /* Sedikit lebih kecil di HP agar tidak overflow */
+    font-size: 2rem;
   }
 }

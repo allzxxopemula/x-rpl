@@ -38,7 +38,8 @@ const Structure = () => {
         {/* Title Sama Dengan About */}
         <h2 className="top-title" data-aos="fade-down">Struktur Kelas</h2>
 
-        <div className="center-flex">
+        {/* Wali Kelas Section */}
+        <div className="teacher-section">
           <div className="card-item highlight" data-aos="fade-up">
             <div className="card-img">
               <img src={teacher.img} alt={teacher.name} />
@@ -50,6 +51,7 @@ const Structure = () => {
           </div>
         </div>
 
+        {/* Pengurus Inti */}
         <div className="grid-layout">
           {coreMembers.map((member, index) => (
             <div className="card-item" key={index} data-aos="fade-up">
