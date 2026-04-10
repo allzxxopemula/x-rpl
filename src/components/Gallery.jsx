@@ -5,7 +5,7 @@ const Gallery = () => {
   const photos = [
     { id: 1, title: "Kebersamaan", category: "Fotbar", imgUrl: "gallery/fotbarbareng.jpeg" },
     { id: 2, title: "Pembelajaran", category: "Academic", imgUrl: "gallery/dikelas.jpg" },
-    { id: 3, title: "Apa ya", category: "ntah", imgUrl: "sabar.jpg" },
+    { id: 3, title: "Kebersamaan", category: "Buka Bersama", imgUrl: "gallery/bukber.jpeg" },
     { id: 4, title: "Apa ya", category: "ntah", imgUrl: "sabar.jpg" },
     { id: 5, title: "Apa ya", category: "ntah", imgUrl: "sabar.jpg" },
     { id: 6, title: "Apa ya", category: "ntah", imgUrl: "sabar.jpg" },
