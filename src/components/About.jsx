@@ -12,7 +12,7 @@ const About = () => {
   ];
 
   const stats = [
-    { icon: <FaUsers />, count: "16", label: "Anggota Aktif" },
+    { icon: <FaUsers />, count: "17", label: "Anggota Aktif" },
     { icon: <FaCheckCircle />, count: "5+", label: "Proyek Selesai" },
     { icon: <FaTrophy />, count: "?", label: "Penghargaan" }
   ];
